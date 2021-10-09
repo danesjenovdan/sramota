@@ -1,0 +1,38 @@
+<!-- <div class="row"> -->
+    <div class="card">
+        <div class="card-overlay">
+            {{ item.domainBasedCountry }}
+            <span style="position: absolute; right: 10px;">{{ item.date }}</span>
+        </div>
+        <!-- <div class="card-header">
+            <h7 class="card-subtitle mb-2 text-muted">{{item.lang}}</h7>
+            <h7 class="card-subtitle mb-2 text-muted">{{item.date}}</h7>
+            <h6 class="card-subtitle mb-2 text-muted">{{item.domain}}
+                <span class="badge badge-light" style="margin-left: 10px;margin-bottom: 4px;">{{item.lang}}</span>
+            </h6>
+        </div> -->
+
+        <div class="card-body">
+
+            <a class="col-12 card-img-top content noimage imagelink" href="{{ item.translateLink }}" target="_blank" style="overflow: hidden;">
+                <img class="center-cropped img-fluid" loading="lazy" ng-src="{{item.img}}" style="padding: 0; object-fit: cover;"/>
+            </a>
+
+            <div class="col-12 card-divider">
+                <div class="row">
+                    <div class="col">
+                        <img class="favicon img-icon" loading="lazy" ng-src="{{ item.favicon }}" />
+                        <span>{{ item.domain }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="card-title sptop">
+                <a class="black linkblack" href={{item.translateLink}} target="_blank">{{item.title_parsed}}</a>
+            </h5>
+
+            <p class="card-text" ng-bind-html="renderHtml(item.desc)"></p>
+
+        </div>
+    </div>
+<!-- </div> -->

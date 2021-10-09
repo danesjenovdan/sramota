@@ -1,0 +1,476 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+.sptop {
+    margin-top:1em;
+}
+
+#cy {
+    height:800px;
+}
+
+.nopad {padding-left:0;padding-right: 0;}
+
+.contcol {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    padding: 1em;
+}
+.sptopmax {
+    margin-top:4em;
+}
+.keys {
+
+    font-size: 1.2em;
+}
+
+
+
+.imgnews {
+    width: 150px;
+    height: auto;
+    max-height: 100px;
+}
+
+.lead {
+    padding-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.center-cropped {
+    width: 120%;
+    height: 150px;
+    max-height: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.noimage {
+    background-image: url("/img/sramota-fallback.png");
+    width: 120%;
+    height: 150px;
+    max-height: 150px;
+    background-position: center center;
+    background-size: cover;
+}
+a.author_link {
+    color: #000;
+    text-decoration: none;
+}
+
+a.author_link:hover {
+    color: #b54748;
+    text-decoration: none;
+}
+
+a.linkblack:hover {
+    color: #b54748;
+    text-decoration: none;
+}
+
+.tick line {
+    display: none;
+}
+
+a:link {
+    color: #b3043a
+}
+
+a:hover {
+    color: #000
+}
+
+.card-img-top {
+    padding: 0
+}
+
+
+div.card-header {
+    margin-top: 0.5em;
+    padding-bottom: 0.1rem;
+    border: 0 !important;
+}
+
+.content {
+    width: 100%; /* or whatever is required */
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+}
+
+
+
+.sptopmaxget {
+    margin-top: 350px;
+}
+
+
+
+.chart_div {
+    background-color: white;
+    z-index: 1000;
+}
+
+.card-text {
+    font-size: 1em;
+}
+
+div.card-header {
+    background-color: white; !important;
+}
+
+div.card-body {
+    padding-top: 0.1rem;
+    margin-top: 0;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -10px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.jumbo {
+    position: absolute;
+    width: 100%;
+    height: 45vw;
+    background-image: url("/img/sramota-cover.png");
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    background-position: center top;
+    background-color: #000000;
+    overflow: hidden;
+}
+.jumbo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 45vw;
+    background-image: url('/img/sramota-roke.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 65%;
+    /* background-position: center 90%; */
+    transition: all 0.3s ease-in-out;
+}
+.jumbo:hover::before {
+    top: 18%;
+    transform: rotate(-3deg);
+}
+.jumbo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    bottom: 0;
+    /* background-image: linear-gradient(transparent, black); */
+    /* background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); */
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+49,000000+50,000000+51,000000+100&0+0,1+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+.front_title {
+    background-color: #b3043a;
+    color: white;
+    text-align: center;
+    display: block;
+    width: 496px;
+    font-size: 80px;
+}
+.front_title:first-of-type {
+    font-weight: 400;
+    letter-spacing: 4.8px;
+}
+.front_title:last-of-type {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 6.24px;
+    font-size: 104px;
+}
+
+.front_subtitle {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.front_byline {
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.sptophalf {
+    margin-top: 15%;
+}
+
+.sptopmin {
+    margin-top: 1.5em;
+}
+
+.sptopbottom {
+    margin-top: 5%;
+}
+
+.dropdown-menu{
+    transform: translate3d(5px, 35px, 0px)!important;
+}
+
+.blackback {
+    background-color: black;
+    color: white;
+}
+
+.whiteback {
+    background-color: white;
+    color: black;
+}
+
+.redborder {
+    border-bottom: 28px #b3043a solid;
+    display: inline-block;
+    line-height: 22px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: 700;
+    font-size: 56px;
+}
+
+html, span, div, a, p {
+    font-family: 'Changa', sans-serif;
+    font-weight: 400;
+}
+
+/* MUKI STYLES */
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-item {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 200px;
+}
+.nav-item:first-of-type {
+    margin-left: 20px;
+}
+.dropdown-toggle::after {
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+}
+.linkblack {
+    font-family: 'Changa', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    color: #b3043a;
+}
+
+.card {
+    border: 1px solid #000000;
+    border-radius: 0;
+    margin-left: -5px;
+    margin-right: -5px;
+    padding: 0;
+    height: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.card-header {
+    margin: 0;
+    padding: 0;
+}
+.card-body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0 !important;
+}
+.card-body p {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+.card-title, .card-text {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.linkblack {
+    font-size: 22px;
+}
+
+.card-overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    z-index: 1;
+    padding-left: 10px;
+}
+
+.card-divider {
+    margin-top: 15px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+.card-divider .img-icon {
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+}
+.card-divider span {
+    display: inline-block;
+    line-height: 38px;
+    position: relative;
+    top: 7px;
+    margin-left: 5px;
+}
+
+.title.h4 {
+    padding-bottom: 30px;
+}
+
+h1.display-1 {
+    font-size: 80px;
+}
+
+.nvd3 .nv-multibar .nv-groups rect, .nvd3 .nv-multibarHorizontal .nv-groups rect, .nvd3 .nv-candlestickBar .nv-ticks rect, .nvd3 .nv-discretebar .nv-groups rect {
+    fill-opacity: 1;
+}
+
+.nvd3 .nv-multibar .nv-groups rect:hover, .nvd3 .nv-multibarHorizontal .nv-groups rect:hover, .nvd3 .nv-candlestickBar .nv-ticks rect:hover, .nvd3 .nv-discretebar .nv-groups rect:hover {
+    fill: #88062E !important;
+    stroke: #88062E !important;
+}
+
+.imagelink {
+    display: block;
+}
+
+.btn-social {
+    border-radius: 0;
+    background-color: #b3043a;
+    color: #ffffff;
+    width: 80px;
+    height: 80px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn-social:hover {
+    transform: rotate(360deg);
+}
+.btn-social svg {
+    width: 40px;
+    height: 40px;
+}
+.btn-social svg path {
+    fill: #ffffff;
+}
+
+.doniraj {
+    width: auto;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.first-lead {
+    width: 496px;
+}
+
+.lead a {
+    color: #b3043a;
+}
+
+@media (max-width: 991px) {
+    .week-container .redborder {
+        line-height: 42px;
+    }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    .blackback {
+        padding-top: 28vw;
+    }
+    .first-lead {
+        width: 100%;
+    }
+    .front_title {
+        background-color: #b3043a;
+        color: white;
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 48px;
+    }
+    .front_title:first-of-type {
+        font-weight: 400;
+        letter-spacing: 4.8px;
+    }
+    .front_title:last-of-type {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 6.24px;
+        font-size: 65px;
+    }
+    
+    #news {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .front_title {
+        font-size: 36px;
+    }
+    .front_title:last-of-type {
+        font-size: 48px;
+    }
+}
+/* end mobile */
+
+.dropdown-menu {
+    margin-left: -258px;
+}

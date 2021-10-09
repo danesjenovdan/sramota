@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sramota
+spec:
+  selector:
+    app: sramota
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

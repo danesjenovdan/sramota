@@ -1,0 +1,48 @@
+[
+    {
+        "key": "Domene",
+        "color": "#333",
+        "values": [
+            {
+                "label": "dw.com",
+                "value": 28
+            },
+            {
+                "label": "euractiv.com",
+                "value": 17
+            },
+            {
+                "label": "total-slovenia-news.com",
+                "value": 14
+            },
+            {
+                "label": "balkaninsight.com",
+                "value": 13
+            },
+            {
+                "label": "euronews.com",
+                "value": 12
+            },
+            {
+                "label": "politico.eu",
+                "value": 10
+            },
+            {
+                "label": "intellinews.com",
+                "value": 10
+            },
+            {
+                "label": "n1info.com",
+                "value": 10
+            },
+            {
+                "label": "liberties.eu",
+                "value": 9
+            },
+            {
+                "label": "nzz.ch",
+                "value": 8
+            }
+        ]
+    }
+]

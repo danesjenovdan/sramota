@@ -8,4 +8,4 @@ resources:
 images:
   - name: sramota
     newName: rg.fr-par.scw.cloud/djnd/sramota
-    newTag: "latest"
+    newTag: 'a181f1ceddaf89bd4609b525099dd188a8a79c34'

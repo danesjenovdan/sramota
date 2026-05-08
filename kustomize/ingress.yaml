@@ -4,21 +4,23 @@ metadata:
   name: sramota-ingress
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
-    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
 spec:
+  ingressClassName: traefik
   tls:
-  - hosts:
-    - sramota.si
-    - www.sramota.si
-    secretName: sramota-tls
+    - hosts:
+        - sramota.djnd.si
+        - sramota.danesjenovdan.si
+      secretName: sramota-tls
   rules:
-  - host: sramota.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: sramota
-            port:
-              number: 80
+    - host: sramota.djnd.si
+      http: &http_paths
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: sramota
+                port:
+                  number: 80
+    - host: sramota.danesjenovdan.si
+      http: *http_paths

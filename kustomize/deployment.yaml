@@ -5,7 +5,7 @@ metadata:
   labels:
     app: sramota
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: sramota
@@ -15,7 +15,7 @@ spec:
         app: sramota
     spec:
       containers:
-      - name: sramota
-        image: sramota
-        ports:
-        - containerPort: 80
+        - name: sramota
+          image: sramota
+          ports:
+            - containerPort: 80
